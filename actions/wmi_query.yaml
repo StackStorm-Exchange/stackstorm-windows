@@ -1,6 +1,6 @@
 ---
   name: "wmi_query"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Run a WMI query on a particular Windows host."
   enabled: true
   entry_point: "wmi_query.py"

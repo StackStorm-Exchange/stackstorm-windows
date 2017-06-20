@@ -1,6 +1,6 @@
 ---
   name: "winexe_cmd"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Run a command via WinEXE (samba/RPC)"
   enabled: true
   entry_point: "winexe_cmd.py"

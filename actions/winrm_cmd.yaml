@@ -1,6 +1,6 @@
 ---
   name: "winrm_cmd"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Run a command via WinRM"
   enabled: true
   entry_point: "winrm_cmd.py"
