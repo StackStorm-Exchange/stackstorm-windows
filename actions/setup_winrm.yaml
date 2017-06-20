@@ -1,6 +1,6 @@
 ---
   name: "setup_winrm"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Enable remote WinRM access via RPC, to allow untrusted connections"
   enabled: true
   entry_point: "setup_winrm.py"

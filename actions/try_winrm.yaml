@@ -1,6 +1,6 @@
 ---
   name: "try_winrm"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Run a basic check to see if WinRM is responding"
   enabled: true
   entry_point: "try_winrm.py"

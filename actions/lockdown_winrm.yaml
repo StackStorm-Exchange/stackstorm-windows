@@ -1,6 +1,6 @@
 ---
   name: "lockdown_winrm"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Disable remote WinRM access via RPC"
   enabled: true
   entry_point: "lockdown_winrm.py"
