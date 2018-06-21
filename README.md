@@ -66,3 +66,29 @@ The WinRM commands require WinRM to be configured to allow non-domain joined con
 the lockdown action.
 
 For more examples, see [WMI Query Language by Example](http://www.codeproject.com/Articles/46390/WMI-Query-Language-by-Example).
+
+### wait_for_winrm
+
+This action behaves similar to the core `linux.wait_for_ssh` action. It allows a workflow
+to wait for a WinRM connection to become available on a Windows host.
+
+
+#### Common parameters
+
+* `host` - Hostname / IP address to connect to
+* `username` - Username used to authenticate.
+* `password` - Password used to authenticate.
+* `verify_ssl_cert` - Should SSL certs on the remote host be validated?
+* `winrm_timeout` - Timeout of each connection attempt (seconds).
+* `sleep_delay` - Time to sleep between connection attempts (seconds).
+* `retries` - Maximum number of retries before failing.
+* `timeout` - Total timeout for the action
+      Note: timeout needs to be `>= ((winrm_timeout + sleep_delay) * retries)` so we override a
+      default Python runner action timeout with a larger value
+
+
+#### Example
+
+``` shell
+st2 run windows.wait_for_winrm host="hostname.domain.tld" username="user@domain.tld" password="xxx" verify_ssl_cert=false
+```
