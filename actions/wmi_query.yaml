@@ -13,6 +13,7 @@
       type: "string"
       description: "Account password."
       required: true
+      secret: true
     query:
       type: "string"
       description: "WQL query to run."
