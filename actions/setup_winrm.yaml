@@ -13,6 +13,7 @@
       type: "string"
       description: "Account password."
       required: true
+      secret: true
     username:
       type: "string"
       description: "Account username."
